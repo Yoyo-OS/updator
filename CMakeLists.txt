@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 
-project(cutefish-updator LANGUAGES CXX)
+project(yoyo-updator LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -21,11 +21,11 @@ set(PROJECT_SOURCES
     qml.qrc
 )
 
-add_executable(cutefish-updator
+add_executable(yoyo-updator
   ${PROJECT_SOURCES}
 )
 
-target_link_libraries(cutefish-updator
+target_link_libraries(yoyo-updator
   PRIVATE
   Qt5::Core
   Qt5::Quick
@@ -36,13 +36,13 @@ target_link_libraries(cutefish-updator
 file(GLOB TS_FILES translations/*.ts)
 qt5_create_translation(QM_FILES ${TS_FILES})
 add_custom_target(translations DEPENDS ${QM_FILES} SOURCES ${TS_FILES})
-add_dependencies(cutefish-updator translations)
+add_dependencies(yoyo-updator translations)
 
-install(TARGETS cutefish-updator RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
-install(FILES ${QM_FILES} DESTINATION /usr/share/cutefish-updator/translations)
+install(TARGETS yoyo-updator RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+install(FILES ${QM_FILES} DESTINATION /usr/share/yoyo-updator/translations)
 
 install(FILES
-    cutefish-updator.desktop
+    yoyo-updator.desktop
     DESTINATION /usr/share/applications/
     COMPONENT Runtime
 )

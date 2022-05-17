@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 YoyoOS Team.
  *
- * Author:     Kate Leet <kate@cutefishos.com>
+ * Author:     Kate Leet <kate@yoyoos.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,9 +25,9 @@
 #include <QTimer>
 #include <QDebug>
 
-const static QString s_dbusName = "com.cutefish.Session";
+const static QString s_dbusName = "com.yoyo.Session";
 const static QString s_pathName = "/Session";
-const static QString s_interfaceName = "com.cutefish.Session";
+const static QString s_interfaceName = "com.yoyo.Session";
 
 UpdatorHelper::UpdatorHelper(QObject *parent)
     : QObject(parent)
@@ -37,7 +37,7 @@ UpdatorHelper::UpdatorHelper(QObject *parent)
 {
     m_backend->init();
 
-    QSettings settings("/etc/cutefish", QSettings::IniFormat);
+    QSettings settings("/etc/yoyo", QSettings::IniFormat);
     m_currentVersion = settings.value("Version").toString();
 
     QTimer::singleShot(100, this, &UpdatorHelper::checkUpdates);

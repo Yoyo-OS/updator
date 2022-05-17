@@ -1,6 +1,6 @@
-# CutefishOS Updator
+# YoyoOS Updator
 
-CutefishOS system update tool.
+YoyoOS system update tool.
 
 ## Dependencies
 

@@ -1,7 +1,7 @@
-Source: cutefish-updator
+Source: yoyo-updator
 Section: devel
 Priority: optional
-Maintainer: CutefishOS <cutefishos@foxmail.com>
+Maintainer: YoyoOS <yoyoos@foxmail.com>
 Build-Depends:  cmake,
 		libqapt-dev,
 		qtbase5-dev,
@@ -11,10 +11,10 @@ Build-Depends:  cmake,
 		qttools5-dev-tools,
 		debhelper (>= 9)
 Standards-Version: 4.6.0
-Homepage: https://cutefishos.com
+Homepage: https://yoyoos.com
 Rules-Requires-Root: no
 
-Package: cutefish-updator
+Package: yoyo-updator
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: CutefishOS Updator.
+Description: YoyoOS Updator.

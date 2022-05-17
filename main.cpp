@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 YoyoOS Team.
  *
- * Author:     Kate Leet <kate@cutefishos.com>
+ * Author:     Kate Leet <kate@yoyoos.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -36,17 +36,17 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
-    const char *uri = "Cutefish.Updator";
+    const char *uri = "Yoyo.Updator";
     qmlRegisterType<UpdatorHelper>(uri, 1, 0, "Updator");
     qmlRegisterType<UpgradeableModel>(uri, 1, 0, "UpgradeableModel");
 
-    if (!QDBusConnection::sessionBus().registerService("com.cutefish.UpdatorGui")) {
+    if (!QDBusConnection::sessionBus().registerService("com.yoyo.UpdatorGui")) {
         return 0;
     }
 
     // Translations
     QLocale locale;
-    QString qmFilePath = QString("%1/%2.qm").arg("/usr/share/cutefish-updator/translations/").arg(locale.name());
+    QString qmFilePath = QString("%1/%2.qm").arg("/usr/share/yoyo-updator/translations/").arg(locale.name());
     if (QFile::exists(qmFilePath)) {
         QTranslator *translator = new QTranslator(QGuiApplication::instance());
         if (translator->load(qmFilePath)) {
