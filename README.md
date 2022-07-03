@@ -1,5 +1,7 @@
 # YoyoOS Updator
 
+[![Build](https://github.com/Yoyo-OS/updator/actions/workflows/build.yml/badge.svg)](https://github.com/Yoyo-OS/updator/actions/workflows/build.yml)
+
 YoyoOS system update tool.
 
 ## Dependencies
